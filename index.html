@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freelancer Invoice Generator – UI/UX Design</title>
+  <meta name="description" content="A minimal single-page billing interface designed in Figma for freelancers to create, preview, and send invoices with ease." />
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #6EE7B7, #3B82F6, #9333EA);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #fff;
+      line-height: 1.6;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    h1, h2 {
+      margin-top: 0;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      background: linear-gradient(90deg, #FACC15, #F472B6, #60A5FA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0fdf4;
+    }
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px 6px;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .btn.primary {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    }
+    .btn.primary:hover {
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
+    }
+    .btn.secondary {
+      background: linear-gradient(90deg, #F97316, #F43F5E);
+    }
+    .btn.secondary:hover {
+      background: linear-gradient(90deg, #EF4444, #EAB308);
+    }
+    /* ===== Sections ===== */
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    ul li {
+      margin: 8px 0;
+    }
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      font-size: 0.95rem;
+      color: #e0f2fe;
+    }
+    footer a {
+      color: #fde047;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📄 Freelancer Invoice Generator – UI/UX Design</h1>
+    <p class="subtitle">
+      A vibrant single-page billing interface in <strong>Figma</strong> for freelancers to create, preview, and send invoices with clarity, speed & simplicity.
+    </p>
+    <div style="text-align:center;">
+      <a href="https://www.figma.com/design/N9F7kQPBgJcrSJ4IrQJXY1/Invoice?t=M6wPCEVqDOzlrDHM-1" class="btn primary" target="_blank">👉 View Figma Design</a>
+      <a href="mailto:souravchoudhuri2004@gmail.com" class="btn secondary">✉️ Contact Me</a>
+    </div>
+
+    <section>
+      <h2>🚀 Key Features</h2>
+      <ul>
+        <li>Freelancer & Client Information</li>
+        <li>Invoice Details (Number, Date, Due Date, Currency)</li>
+        <li>Itemized Billing Table with auto-calculated totals</li>
+        <li>Tax & Discount options</li>
+        <li>Notes / Payment instructions</li>
+        <li>Invoice Preview (printable & branded)</li>
+        <li>Action Buttons: <code>Preview | Download PDF | Send Invoice</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛠 Tools & Design</h2>
+      <ul>
+        <li><strong>Figma</strong> (Web/Desktop)</li>
+        <li><strong>Plugins:</strong> Iconify, Content Reel, Google Fonts, Color Palettes</li>
+        <li><strong>Fonts:</strong> Poppins, Inter, Roboto</li>
+        <li><strong>Icons:</strong> Font Awesome / Material Symbols / Lucide</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📧 Contact</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:souravchoudhuri2004@gmail.com">souravchoudhuri2004@gmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sourav-choudhuri-52bb48299?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BYH%2BfJyPITKuX5z5CcCMgOw%3D%3D" target="_blank">Your Profile Link</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📜 License</h2>
+      <p>Created for <strong>Motioncut UI/UX Internship</strong>. For learning and inspiration only.</p>
+    </section>
+  </div>
+
+  <footer>
+    © <span id="year"></span> <strong>Sourav Choudhari</strong> · Built with ❤️ for the design community
+  </footer>
+
+  <script>
+    // Auto year update
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
